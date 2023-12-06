@@ -5,14 +5,14 @@ QBCore.Commands.Add('cash', 'Check Cash Balance', {}, false, function(source, _)
     local Player = QBCore.Functions.GetPlayer(source)
     local cashamount = Player.PlayerData.money.cash
     
-    TriggerClientEvent('QBCore:Notify', source, 'Пари: $'..cashamount)
+    TriggerClientEvent('QBCore:Notify', source, 'Cash: $'..cashamount)
 end)
 
 QBCore.Commands.Add('bank', 'Check Bank Balance', {}, false, function(source, _)
     local Player = QBCore.Functions.GetPlayer(source)
     local bankamount = Player.PlayerData.money.bank
 
-    TriggerClientEvent('QBCore:Notify', source, 'Банка: $'..bankamount)
+    TriggerClientEvent('QBCore:Notify', source, 'Bank: $'..bankamount)
 end)
 
 RegisterNetEvent('hud:server:GainStress', function(amount)
