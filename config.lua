@@ -15,6 +15,7 @@ Config.DefaultSettings = {
     gasblips = false,
     alwaysminimap = false
 }
+Config.SpeedType = 'km/h'
 -- Stress
 Config.WhitelistedWeaponArmed = { -- Disable showing armed icon from weapons in this table
     -- miscellaneous

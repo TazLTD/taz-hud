@@ -240,9 +240,15 @@ RegisterNetEvent('taz-hud:get:data', function(data)
             if inveh then
                 local speed = math.floor(GetEntitySpeed(veh) * 3.6)
 
-                if speed == 0 then
-                    speed = 1
-                end
+                    if speed == 0 then
+                        speed = 1
+                    end
+
+                    if Config.SpeedType == 'mph' then
+                        speed = math.floor(GetEntitySpeed(veh) * 2.23694)
+                    elseif Config.SpeedType ~= 'km/h' then
+                    end
+                    
 
                 PauseMenuReset()
 
